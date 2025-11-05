@@ -1,8 +1,30 @@
 # Advent Of Code
 
-Repo to record my AOC solutions. 
+```
+           *
+          /|\
+         / | \
+        /  |  \
+       /   *   \
+      /   ***   \
+     /   *****   \
+    /   *******   \
+   /   *********   \
+  /   ***********   \
+ /   *************   \
+/___****************__\
+          |||
+          |||
+        ~~~~~~~
+```
 
-### Years I've participated:
-- https://adventofcode.com/2025
-- https://adventofcode.com/2024
-- https://adventofcode.com/2023
+Repo to record my AOC solutions.
+
+## 🎄 Years I've participated:
+- [2025](https://adventofcode.com/2025) (C++)
+- [2024](https://adventofcode.com/2024) (Golang)
+- [2023](https://adventofcode.com/2023) (Rust)
+
+---
+
+*Happy Coding! 🎅⭐*
