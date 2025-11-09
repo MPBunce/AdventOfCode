@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include "solution/day_one.h"
+#include "solution/day_two.h"
 
 int main() {
     std::string day = "day_one"; // Change as needed
@@ -14,6 +15,8 @@ int main() {
 
     if (day == "day_one") {
         solve_day_one(file);
+    } else if (day == "day_two") {
+        solve_day_two(file); 
     } else {
         std::cerr << "Unknown day: " << day << std::endl;
         file.close();

@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	day := "day_two" // or get from args/env
+	day := "day_three" // or get from args/env
 
 	inputPath := fmt.Sprintf("./input/%s.txt", day)
 	file, err := os.Open(inputPath)
@@ -22,8 +22,8 @@ func main() {
 		solution.SolveDayOne(file)
 	case "day_two":
 		solution.SolveDayTwo(file)
-	// case "day_three":
-	// 	solution.SolveDayThree(file)
+	case "day_three":
+		solution.SolveDayThree(file)
 	// case "day_four":
 	// 	solution.SolveDayFour(file)
 	// case "day_five":

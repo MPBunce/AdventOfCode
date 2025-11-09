@@ -90,21 +90,3 @@ func validateRowTwo(row []int) int {
 
 	return 0
 }
-
-func validateSliceRow(row []int, isDecreasing bool) int {
-	for i := 0; i < len(row)-1; i++ {
-		if isDecreasing {
-			diff := row[i] - row[i+1]
-			if diff > 3 || diff < 1 {
-				return 0
-			}
-		} else {
-			diff := row[i+1] - row[i]
-			if diff > 3 || diff < 1 {
-				return 0
-			}
-		}
-
-	}
-	return 1
-}
