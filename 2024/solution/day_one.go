@@ -52,5 +52,16 @@ func solveDayOnePartOne(left []int, right []int) {
 }
 
 func solveDayOnePartTwo(left []int, right []int) {
+	// Count occurrences in right list
+	rightCounts := make(map[int]int)
+	for _, v := range right {
+		rightCounts[v]++
+	}
 
+	// Calculate similarity score
+	sum := 0
+	for _, v := range left {
+		sum += v * rightCounts[v] // If v not in map, returns 0
+	}
+	fmt.Println(sum)
 }
