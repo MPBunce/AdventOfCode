@@ -3,42 +3,33 @@ package solution
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"regexp"
 	"strconv"
 )
 
 func SolveDayThree(file *os.File) {
-	//Day One
-	// patternOne := `mul\([^)]*\)`
-	// scanner := bufio.NewScanner(file)
-	// var finds []string
-
-	// re := regexp.MustCompile(patternOne)
-
-	// for scanner.Scan() {
-	// 	line := scanner.Text()
-
-	// 	// Find all matches
-	// 	matches := re.FindAllString(line, -1)
-
-	// 	// Append all matches to finds
-	// 	finds = append(finds, matches...)
-	// }
-
-	// solveDayThreePartOne(finds)
-
-	//Day Two
+	// Read the entire file once
 	scanner := bufio.NewScanner(file)
 	var fullInput string
 
-	// Read all lines into one string
 	for scanner.Scan() {
 		fullInput += scanner.Text()
 	}
 
-	solveDayThreePartTwo(fullInput)
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
 
+	// Part One - extract mul() patterns
+	patternOne := `mul\([^)]*\)`
+	re := regexp.MustCompile(patternOne)
+	finds := re.FindAllString(fullInput, -1)
+	solveDayThreePartOne(finds)
+
+	// Part Two - use the full input
+	solveDayThreePartTwo(fullInput)
 }
 
 func solveDayThreePartOne(finds []string) {
