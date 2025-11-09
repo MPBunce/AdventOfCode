@@ -30,11 +30,11 @@ func SolveDayTwo(file *os.File) {
 	}
 	//fmt.Println(arr)
 
-	solvePartOne(arr)
-	solvePartTwo(arr)
+	solveDayTwoPartOne(arr)
+	solveDayTwoPartTwo(arr)
 }
 
-func solvePartOne(arr [][]int) {
+func solveDayTwoPartOne(arr [][]int) {
 	count := 0
 	for _, v := range arr {
 		count += validateRow(v, v[0] > v[1])
@@ -60,7 +60,7 @@ func validateRow(row []int, isDecrease bool) int {
 	return 1
 }
 
-func solvePartTwo(arr [][]int) {
+func solveDayTwoPartTwo(arr [][]int) {
 	count := 0
 	for _, v := range arr {
 		count += validateRowTwo(v)
