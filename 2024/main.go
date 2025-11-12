@@ -2,15 +2,21 @@ package main
 
 import (
 	"AdventOfCode/2024/solution" // Change 'yourmodule' to your actual module name
+	"flag"
 	"fmt"
 	"log"
 	"os"
 )
 
 func main() {
-	day := "day_three" // or get from args/env
+	var useSampleInput = flag.Bool("sampleText", false, "a bool")
+	flag.Parse()
+	day := "day_four" // or get from args/env
 
 	inputPath := fmt.Sprintf("./input/%s.txt", day)
+	if *useSampleInput {
+		inputPath = "./input/sample.txt"
+	}
 	file, err := os.Open(inputPath)
 	if err != nil {
 		log.Fatalf("failed to open input file: %v", err)
@@ -24,8 +30,8 @@ func main() {
 		solution.SolveDayTwo(file)
 	case "day_three":
 		solution.SolveDayThree(file)
-	// case "day_four":
-	// 	solution.SolveDayFour(file)
+	case "day_four":
+		solution.SolveDayFour(file)
 	// case "day_five":
 	// 	solution.SolveDayFive(file)
 	// case "day_six":
