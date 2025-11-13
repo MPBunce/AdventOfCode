@@ -11,7 +11,7 @@ import (
 func main() {
 	var useSampleInput = flag.Bool("sampleText", false, "a bool")
 	flag.Parse()
-	day := "day_four" // or get from args/env
+	day := "day_five" // or get from args/env
 
 	inputPath := fmt.Sprintf("./input/%s.txt", day)
 	if *useSampleInput {
@@ -32,8 +32,8 @@ func main() {
 		solution.SolveDayThree(file)
 	case "day_four":
 		solution.SolveDayFour(file)
-	// case "day_five":
-	// 	solution.SolveDayFive(file)
+	case "day_five":
+		solution.SolveDayFive(file)
 	// case "day_six":
 	// 	solution.SolveDaySix(file)
 	// case "day_seven":
